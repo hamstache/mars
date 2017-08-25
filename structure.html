@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<title>Structure | Mars</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background: url('img/mars-overview.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("img/mars-home.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("img/soil1.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+    </li>
+    <li class="w3-left-align"><a href="home.html">HOME</a></li>
+    <li class="w3-hide-small"><a href="history.html">HISTORY</a></li>
+    <li class="w3-hide-small" style="background-color: #BDBDBD;"><a href="structure.html">STRUCTURE</a></li>
+    <li class="w3-hide-small"><a href="composition.html">COMPOSITION</a></li>
+    <li class="w3-hide-small"><a href="future.html">FUTURE</a></li>
+    <li class="w3-hide-small"><a href="references.html">REFERENCES</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#" class="w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-white">
+      <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
+      <li><a href="#portfolio" onclick="toggleFunction()">PORTFOLIO</a></li>
+      <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
+      <li><a href="#">SEARCH</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">MARS</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <div class="w3-row">
+
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center"><em>Structure</em></h3>
+    <div class="w3-row">
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>Mars has three basic layers:</p>
+            <ul>
+                <li>
+                    Crust - Rocky surface with evidence of ground water and volcanic activity
+                </li>
+                <li>
+                    Mantle - Solid mantle of silicates and metals
+                </li>
+                <li>
+                    Core - Consists of iron and nickel, but it is currently unknown whether or not it is liquid or solid. Currently it is thought that the core is a solid. 
+                </li>
+            </ul>
+        </div>
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <img src="img/marsstructure.png" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+        </div>
+  </div>
+</div>
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">VOLCANISM</span>
+  </div>
+</div>
+<div class="w3-row">
+
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="img/olympusMons.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>
+            Volcanic structures cover large portions of Mars as shown by satellite images. A large handful of these volcanoes are incredibly large in size due to little tectonic plate action by the planet for billions of years. 
+        </p>
+        <p>
+            <strong>Olympus Mons</strong> is the largest volcano in the Solar System. It is located in the Tharsis region of the planet along with 3 other volcanoes. Olympus Mons is 3 times taller than Mt. Everest standing at 27km tall. The volcano also measures about 500km in diameter. The volcano was formed by a single hotspot that flowed for millions of years. The reason for such a consistent flow in one place is due to the lack of tectonic activity on the planet.
+        <p>
+            In the Elysium volcanic province of Mars, there are three main volcanoes. These volcanoes are Elysium Mons, Hecates Tholus, and Albor Tholus. Elysium Mons is 375km across and 14km high (about the hight of the Challenger Deep's depth). Hecates Tholus is 180km across and 4.8km high. Albor Tholus is 150km across and 4.1km high. 
+        </p>
+    </div>
+</div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">GROUND WATER</span>
+  </div>
+</div>
+<div class="w3-row">
+
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>
+                Some of the most recent evidence of water flow on Mars is located on the walls of the Gami crater where there is observable recurring slope lineae (downhill flows). These are believed to appear when Mars is above -10 degress Farenheit in the Summer of Mars. It is described as a briny liquid water that flows down the walls of this crater. 
+        </p>
+        <p>
+                There is also evidence found by NASA to suggest that one-fifth the surface of ancient Mars was once covered in a vast ocean. This would have made Mars a warm and wet place for Martian life to potentially flourish. This ocean is predicted to have been located on the northern hemisphere of the planet and estimated to be about the same amount of water that the Atlantic Ocean covers the Earth. It is important to note that water on Mars has two different forms. The first is much like that on Earth with two hydrogen atoms and one oxygen atom. The second is made with a heavy isotope called deuterium. Due to the difference in chemistry of these two forms of water, the form that is similar to Earth's water is lost to space over time while the latter is left behind on the planet. 
+        </p>
+        <p>
+                The vast amounts of deuterium discovered by infrared maps show that Mars lost an amount of water enough to cover the entire surface of Mars. However, there is no evidence of this happening. Based on the Martian plains today, scientists believe water pooled into a deep ocean on the northern plains that ultimately resulted in the gigantic ancient ocean. Over time, the atmosphere thinned and more water was lost to space. The dropping in temperature of the planet also eliminated liquid water and it eventually froze. 
+        </p>
+    </div>
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="img/wateronmars.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+</div>
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">LAND STRUCTURES</span>
+  </div>
+</div>
+<div class="w3-row">
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <p>
+            There are many other interesting landforms to examine on Mars. 
+        </p>
+    </div>
+</div>
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="img/windCarvedMarsRock.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <h5>
+            Wind Carved Rock
+        </h5>
+        <p>
+            These carvings would have required a wind direction dominating for a long time to achieve these rock features. This also reveals us the strength of the winds on the surface along with new information on the rock itself. The absence of rubble or boulders indicates that this rock must have consisted of weakly cemented fine ganules of volcanic ash, atmospheric dust, or accumulations of wind deposited fine sands. 
+        </p>
+    </div>
+</div>
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="img/lakesEvidenceMars.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <h5>
+            Lakes and Streams
+        </h5>
+        <p>
+            Lakes and streams on Mars were discovered through topographic images of the surface revealing evidence of deep depressions and streamlined valleys. These findings add to the collection of evidence about the climate on the planet of ancient Mars being suitable for microbial life. 
+        </p>
+    </div>
+</div>
+<div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+        <img src="img/frozenSandDunes.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+        <h5>
+            Frosted Sand Dunes
+        </h5>
+        <p>
+            Mars is largely covered in sand dunes with boulders lying on flat areas between the dunes. On the southern hemisphere of Mars, these dunes slowly defrost in the sunlight from a layer of carbon dioxide (we know it as dry ice). The spots come from pressurized carbon dioxide gas escaping to the surface. 
+        </p>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+
+  </div>
+  <p class="copyright text-muted">Copyright &copy; Josh Moynihan 2016</p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
+

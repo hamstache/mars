@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<title>History | Mars</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+ul {
+  z-index: -1;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background: url('img/mars-overview.jpg');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("img/mars-home.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("img/soil1.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+/* ================ The Timeline ================ */
+
+        .timeline {
+          position: relative;
+          width: 660px;
+          margin: 0 auto;
+          margin-top: 20px;
+          padding: 1em 0;
+          list-style-type: none;
+        }
+
+        .timeline:before {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          content: ' ';
+          display: block;
+          width: 6px;
+          height: 100%;
+          margin-left: -3px;
+          background: rgb(80,80,80);
+          background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+          background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+          background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+          background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+          background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+          
+          z-index: 5;
+        }
+
+        .timeline li {
+          padding: 1em 0;
+        }
+
+        .timeline li:after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+        }
+
+        .direction-l {
+          position: relative;
+          width: 300px;
+          float: left;
+          text-align: right;
+        }
+
+        .direction-r {
+          position: relative;
+          width: 300px;
+          float: right;
+        }
+
+        .flag-wrapper {
+          position: relative;
+          display: inline-block;
+          
+          text-align: center;
+        }
+
+        .flag {
+          position: relative;
+          display: inline;
+          background: rgb(248,248,248);
+          padding: 6px 10px;
+          border-radius: 5px;
+          
+          font-weight: 600;
+          text-align: left;
+        }
+
+        .direction-l .flag {
+          -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+          -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+          box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+        }
+
+        .direction-r .flag {
+          -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+          -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+          box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+        }
+
+        .direction-l .flag:before,
+        .direction-r .flag:before {
+          position: absolute;
+          top: 50%;
+          right: -40px;
+          content: ' ';
+          display: block;
+          width: 12px;
+          height: 12px;
+          margin-top: -10px;
+          background: #fff;
+          border-radius: 10px;
+          border: 4px solid rgb(255,80,80);
+          z-index: 10;
+        }
+
+        .direction-r .flag:before {
+          left: -40px;
+        }
+
+        .direction-l .flag:after {
+          content: "";
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          height: 0;
+          width: 0;
+          margin-top: -8px;
+          border: solid transparent;
+          border-left-color: rgb(248,248,248);
+          border-width: 8px;
+          pointer-events: none;
+        }
+
+        .direction-r .flag:after {
+          content: "";
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          height: 0;
+          width: 0;
+          margin-top: -8px;
+          border: solid transparent;
+          border-right-color: rgb(248,248,248);
+          border-width: 8px;
+          pointer-events: none;
+        }
+
+        .time-wrapper {
+          display: inline;
+          
+          line-height: 1em;
+          font-size: 0.66666em;
+          color: rgb(250,80,80);
+          vertical-align: middle;
+        }
+
+        .direction-l .time-wrapper {
+          float: left;
+        }
+
+        .direction-r .time-wrapper {
+          float: right;
+        }
+
+        .time {
+          display: inline-block;
+          padding: 4px 6px;
+          background: rgb(248,248,248);
+        }
+
+        .desc {
+          margin: 1em 0.75em 0 0;
+          
+          font-size: 0.77777em;
+          font-style: italic;
+          line-height: 1.5em;
+        }
+
+        .direction-r .desc {
+          margin: 1em 0 0 0.75em;
+        }
+
+        /* ================ Timeline Media Queries ================ */
+
+        @media screen and (max-width: 660px) {
+
+        .timeline {
+            width: 100%;
+            padding: 4em 0 1em 0;
+        }
+
+        .timeline li {
+            padding: 2em 0;
+        }
+
+        .direction-l,
+        .direction-r {
+            float: none;
+            width: 100%;
+
+            text-align: center;
+        }
+
+        .flag-wrapper {
+            text-align: center;
+        }
+
+        .flag {
+            background: rgb(255,255,255);
+            z-index: 15;
+        }
+
+        .direction-l .flag:before,
+        .direction-r .flag:before {
+          position: absolute;
+          top: -30px;
+            left: 50%;
+            content: ' ';
+            display: block;
+            width: 12px;
+            height: 12px;
+            margin-left: -9px;
+            background: #fff;
+            border-radius: 10px;
+            border: 4px solid rgb(255,80,80);
+            z-index: 10;
+        }
+
+        .direction-l .flag:after,
+        .direction-r .flag:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -8px;
+            height: 0;
+            width: 0;
+            margin-left: -8px;
+            border: solid transparent;
+            border-bottom-color: rgb(255,255,255);
+            border-width: 8px;
+            pointer-events: none;
+        }
+
+        .time-wrapper {
+            display: block;
+            position: relative;
+            margin: 4px 0 0 0;
+            z-index: 14;
+        }
+
+        .direction-l .time-wrapper {
+            float: none;
+        }
+
+        .direction-r .time-wrapper {
+            float: none;
+        }
+
+        .desc {
+            position: relative;
+            margin: 1em 0 0 0;
+            padding: 1em;
+            background: rgb(245,245,245);
+            -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+            -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+            box-shadow: 0 0 1px rgba(0,0,0,0.20);
+            
+          z-index: 15;
+        }
+
+        .direction-l .desc,
+        .direction-r .desc {
+            position: relative;
+            margin: 1em 1em 0 1em;
+            padding: 1em;
+            
+          z-index: 15;
+        }
+
+        }
+
+        @media screen and (min-width: 400px ?? max-width: 660px) {
+
+        .direction-l .desc,
+        .direction-r .desc {
+            margin: 1em 4em 0 4em;
+        }
+
+        }
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
+      <a class="w3-hover-black" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+      </a>
+    </li>
+    <li class="w3-left-align"><a href="home.html">HOME</a></li>
+    <li class="w3-hide-small" style="background-color: #BDBDBD;"><a href="history.html">HISTORY</a></li>
+    <li class="w3-hide-small"><a href="structure.html">STRUCTURE</a></li>
+    <li class="w3-hide-small"><a href="composition.html">COMPOSITION</a></li>
+    <li class="w3-hide-small"><a href="future.html">FUTURE</a></li>
+    <li class="w3-hide-small"><a href="references.html">REFERENCES</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#" class="w3-hover-red">
+        <i class="fa fa-search"></i>
+      </a>
+    </li>
+  </ul>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium">
+    <ul class="w3-navbar w3-left-align w3-white">
+      <li><a href="#about" onclick="toggleFunction()">ABOUT</a></li>
+      <li><a href="#portfolio" onclick="toggleFunction()">PORTFOLIO</a></li>
+      <li><a href="#contact" onclick="toggleFunction()">CONTACT</a></li>
+      <li><a href="#">SEARCH</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">MARS</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center"><em>History</em></h3>
+  <!-- The Timeline -->
+
+        <ul class="timeline">
+
+            <!-- Item 1 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="flag">Early Observations</span>
+                        <span class="time-wrapper"><span class="time">Before 1500</span></span>
+                    </div>
+                    <div class="desc"><strong>The Babylonians</strong> developed advanced methods for predicting eclipses and future positions of Mars, but never attempted to explain what they witnessed. 
+                    <hr>
+                    <strong>The Egyptians</strong> noticed the stars must be fixed and the sun moves relative to the stars. Planets of our Solar System were first observed (Mercury, Venus, Mars, Jupiter, Saturn).
+                    <hr>
+                    <strong>The Greeks</strong> named the planet Ares after their god of war. <strong>The Romans</strong> named the planet Mars after their god of war just like the Greeks. However, their respective cultures referred to the god of war by a different name.  
+                    </div>
+                </div>
+            </li>
+          
+            <!-- Item 2 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="flag">Keen Eyesight</span>
+                        <span class="time-wrapper"><span class="time">1500s</span></span>
+                    </div>
+                    <div class="desc">
+                        Tycho Brahe (1546 - 1601), a Danish Astronomer, only had his eyesight to understand Mars and make calculations about its position that were accurate within four minutes of arc. He studied in his observatory on an island near Copenhagen for 20 years.
+                    </div>
+                </div>
+            </li>
+
+            <!-- Item 3 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="flag">The First Telescopes</span>
+                        <span class="time-wrapper"><span class="time">1600s</span></span>
+                    </div>
+                    <div class="desc">
+                        <strong>1609</strong> Galileo Galilei (1564 - 1642) becomes the first person to observe Mars with a primitive telescope for astronomical purposes. 
+                        <hr>
+                        <strong>1659</strong> Christiaan Huygens (1629 - 1695) draws Mars using his advanced telescope. His observations helped calculate that Mars had approximately a 24 hour day period. 
+                        <hr>
+                        <strong>1666</strong> Giovanni Cassini (1625 - 1712) observes Mars and concludes that the Mars day is exactly 24 hours and 40 minutes long. 
+                        <hr>
+                        <strong>1672</strong> Huygens notices signs of the souther polar cap at the south pole.
+                    </div>
+                </div>
+            </li>
+            <!-- Item 4 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="flag">Growth of Telescopes</span>
+                        <span class="time-wrapper"><span class="time">1700s</span></span>
+                    </div>
+                    <div class="desc">
+                        <strong>1704</strong> Giancomo Miraldi discovers that the southern cap is not centered on the rotational pole. 
+                        <hr>
+                        <strong>1719</strong> Mars moves in opposition and close to Earth; bringing panic to people due to the brightness of the sky. 
+                        <hr>
+                        <strong>1727</strong> In the text of Gulliver's Travels, Jonathan Swift describes Martian moons and their distances from Mars along with the time it takes for a full rotation.
+                        <hr>
+                        <strong>1777-1783</strong> Sir William Herschel (1738 - 1822) studied Mars with telescopes he build himself. Believed there were inhabitants on Mars at one point in time with intelligent beings. 
+                        <hr>
+                        <strong>1784</strong> Hershcel concluded Mars had tenuous (weak) atmosphere, discussed the appearances of its polar regions, the inclination of its axis, the position of its poles, and spheroidal figure.
+                    </div>
+                </div>
+            </li>
+            <!-- Item 5 -->
+            <li>
+                <div class="direction-r">
+                    <div class="flag-wrapper">
+                        <span class="flag">A Closer Look</span>
+                        <span class="time-wrapper"><span class="time">1800s</span></span>
+                    </div>
+                    <div class="desc">
+                        <strong>1809</strong> Honore Flaugergues, French astronomer, notices dust clouds on the surface and refers to them as "yellow clouds." 
+                        <hr>
+                        <strong>1862</strong> Frederik Kaiser calculated the rotational period of Mars to be 24 hours, 37 minutes, 22.62 seconds, which is incredibly accurate to today's accepted value) 
+                        <hr>
+                        <strong>1867</strong> Richard Anthony Proctor publishes a map of Mars with continents and oceans.
+                        <hr> 
+                        <strong>1867</strong> Pierre Jules Janssen (1824 - 1907) and Sir William Huggins (1824 - 1910) make the first (unsuccessful) attempt to detect water vapor and oxygen spectroscopically (electromagnetic radiation). 
+                        <hr>
+                        <strong>1877</strong> Asaph Hall Discovers the moons of Mars. He names them Phobos (fear) and Deimos (freight) after the horses of the Greek war god, Ares (counterpart to the Roman war god, Mars).
+                    </div>
+                </div>
+            </li>
+            <!-- Item 6 -->
+            <li>
+                <div class="direction-l">
+                    <div class="flag-wrapper">
+                        <span class="flag">Exploring the Surface</span>
+                        <span class="time-wrapper"><span class="time">1900s to Present Day</span></span>
+                    </div>
+                    <div class="desc">
+                        <strong>1964</strong> Mariner 4 was the first spacecraft to fly by Mars and obtain close-up pictures of the Red Planet, passing within 9,844 kilometers of Mars.
+                        <hr>
+                        <strong>1969</strong> Mariner 6 and 7 both succeeded in flybys of Mars at an altitude of 3,430 kilometers and returned 75 images from Mariner 6 and 126 images from Mariner 7.
+                        <hr>
+                        <strong>1971</strong> Mariner 9 became the first spacecraft to go into orbit around another planet. 
+                        <hr>
+                        <strong>1975</strong> Viking 1 successfully orbited and eventualy landed on the surface of Mars. It recorded weather and conducted experiments on soil samples connected with a scoop. 
+                        <hr>
+                        <strong>2003</strong> Spirit and Opportunity landed on Mars and became one of the successful rover landings for NASA. Its extended mission allowed an encounter of evidence for past water. Mars Express also successfully entered orbit and began returning 3D, color images. It also detected methane and evidence for recent volcanism on Mars.  
+                        <hr>
+                        <strong>2005</strong> Mars Reconnaissance Orbiter is put into orbit of Mars to search for evidence of past water on Mars. 
+                        <hr>
+                        <strong>2011</strong> Curiosity rover builds on Spirit and Opportunity rover data. This includes detection of organic material.
+                        <hr>
+                        <strong>2013</strong> MAVEN (Mars Atmosphere and Volatile Evolution) provided measurements to address questions on climate and habitability. 
+                        <hr>
+                        
+                    </div>
+                </div>
+            </li>
+          
+        </ul>
+
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+
+  </div>
+  <p class="copyright text-muted">Copyright &copy; Josh Moynihan 2016</p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+<!-- Google Map Location -->
+var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
+
